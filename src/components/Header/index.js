@@ -1,18 +1,20 @@
-import React from 'react'
+import React from "react";
+import { Link } from "react-router-dom";
 
-import RMDBLogo from '../../images/react-movie-logo.svg';
-import TMDBLogo from '../../images/tmdb_logo.svg';
+import RMDBLogo from "../../images/react-movie-logo.svg";
+import TMDBLogo from "../../images/tmdb_logo.svg";
 
-import {Wrapper,Content,LogoImg,TMDBLogoImg} from './Header.styles';
+import { Wrapper, Content, LogoImg, TMDBLogoImg } from "./Header.styles";
 
 const Header = () => (
-    <Wrapper>
-        <Content> 
-            <LogoImg src={RMDBLogo} alt="rmdb_logoimage"/>
-            <TMDBLogoImg src={TMDBLogo} alt="tmdb_logo"/>
-         </Content> 
-    </Wrapper>
-)
-
+	<Wrapper>
+		<Content>
+			<Link to="/">
+				<LogoImg src={RMDBLogo} alt="rmdb_logoimage" />
+			</Link>
+			<TMDBLogoImg src={TMDBLogo} alt="tmdb_logo" />
+		</Content>
+	</Wrapper>
+);
 
 export default Header;
